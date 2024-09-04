@@ -1,0 +1,133 @@
+*{
+    color: white;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#about-content {
+    height: calc(100vh - 7rem);;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-wrapper{
+    height: 25rem;
+    display: flex;
+    width: 70%;
+    gap: 2rem;
+}
+
+#profile {
+    width: 40%;
+    border-radius: 1rem;
+    background-image: 
+        linear-gradient(to bottom, transparent, black), 
+        url('/public/profile.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+#profile::after{
+    content: 'Venu Pulagam';
+    align-self: flex-end;
+    padding: 1rem;
+    font-family: 'space-grotesk';
+    font-weight: bold;
+    color: #b3b3b3;
+    font-size: 2rem;
+}
+
+#data{
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    width: 60%;
+    padding: 1rem 0rem;
+}
+
+#data h1{
+    color: #1db954;
+}
+
+#data h1:nth-child(3) {
+    margin-top: 1.5rem;
+}
+
+#contact {
+    display: flex;
+    gap: 2rem;
+    transition: all 0.15s ease-in-out;
+}
+
+#contact a {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    display: flex;
+    gap: 0.15rem;
+    flex-direction: column; 
+    position: relative;
+    transition: all 0.15s ease-in-out;
+    text-decoration: none;
+}
+
+#contact a:hover{
+    cursor: pointer;
+}
+
+#contact a:hover i {
+    filter: drop-shadow(0px 0px 15px #1db954);
+}
+
+#contact a::after {
+    content: attr(name);
+    font-size: 0.75rem;
+    position: absolute;
+    align-self: center;
+    padding-top: 0.25rem;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+}
+
+#contact a:hover::after {
+    opacity: 1;
+    transform: translate(0, 2rem);
+}
+
+@media (orientation:portrait) {
+    #about-wrapper{
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 7rem);
+        gap: 1rem;
+    }
+
+    #data{
+        width: 100%;
+        gap: 1rem;
+        
+    }
+
+    #profile{
+        height: 50%;
+        width: 100%;
+    }
+
+    #contact{
+        flex-wrap: wrap;
+    }
+
+    p{
+        overflow: auto;
+    }
+}

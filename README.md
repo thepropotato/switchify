@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Switchify
+ 
+ Switchify is an effecient playlist transfer website that does copy playlists from Spotify to Youtube Music. I started this project as an alternative of Tune My Music, which won't allow users to transfer more than 200 songs in a go. Being a huge fan of music, i often switch between audio platforms and i'm pretty sure most of us does the same. That is when i decided to create my own playlist transfer application. Being a web developer, I started building a website for the same. And here it is.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***Switchify does not store any data. Every password you enter is either in Google's in Spotify's authentication page.***
+<br><br>
 
-## Available Scripts
+# Website
 
-In the project directory, you can run:
+![Home page](images/home.png)
 
-### `npm start`
+Once you click **Switch to Youtube Music**, you will be redirected to spotify's own authentication page where you enter your credentials. Once the auth flow has been completed, you will see this page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Playlists](images/playlists.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is the page where you can select the playlist that you want to convert from Spotify to Youtube music. You can either click on the navigations buttons provided or simply click on the circle and you will see a dropdown from which you can directly select the required playlist. 
 
-### `npm test`
+Once you click **Convert** you will be redirected to the following page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Before Conversion](images/pre-transfer.png)
 
-### `npm run build`
+Here you can view all the songs in your playlist. You can not interact with the song-titles. Whatever is in the playlist selected, will get copied. As of now, there is no custom-select option. Once you hit the **Start Conversion** button, you will be redirected to the authentication page of Google. After successful login, your playlist transfer will start. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![After Conversion](images/post-transfer.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The logs of the transfer will be shown in the terminal on the left half of the page. The progress
+of the transfer will be displayed by the vertical line beside the terminal. Red color inidicates progress.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When the progress bar is completely filled, you can find your playlist completely transfered, reflecting which you will have the following popup window saying 'Conversion completed successfully'. Clicking on **Okay** will close the popup window.
 
-### `npm run eject`
+![Popup](images/popup.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This marks the end of the functionality of the website.
+<br><br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# About Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The website also features a simple about page that displays the basic information of the application and contact details of the developer (that's me).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![About page](images/about.png)
 
-## Learn More
+# Design Idea
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You may have noticed that the website's color palette is Green and Black. Have you seen this somewhere else ?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Yessir. It is a homeage to our beloved Spotify before we switch from it.
 
-### Code Splitting
+The red color at places indicates the switch to youtube music.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The logo has a partial underline with a gradient of green to red, which indicates the same. This color selection indicates the transition from Spotify to Youtube music. Also, in the home page, you can find the color of **S** in **Switchify** to be green, and **y** to be red. 
+<br><br>
 
-### Analyzing the Bundle Size
+# Queries and Feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+For any Queries and feedback please mail me at notvenupulagam@gmail.com
 
-### Making a Progressive Web App
+**Welcome to the Community.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Thank you.*

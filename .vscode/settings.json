@@ -1,0 +1,11 @@
+{
+    "background.backgroundOpacity": [
+        0.2,
+        0.1,
+        0.1,
+        0.1
+    ],
+    "background.windowBackgrounds": [
+        "c:/Users/venup/Documents/spiderman.png"
+    ]
+}

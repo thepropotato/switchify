@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    background-color: #b3b3b323;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    height: 2rem;
+    align-items: center;
+    border-radius: 1rem;
+    color: #b3b3b3;
+}
+
+header *{
+    color: #b3b3b3;
+}
+
+header h2 {
+    position: relative;
+}
+
+#logo{
+    background-color: transparent;
+    border: none;
+}
+
+header h2::after {
+    content: "";
+    width: 80%;
+    height: 0.1rem;
+    background-image: linear-gradient(to right, #1db954, red);
+    position: absolute;
+    top: 90%;
+    left: 0%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav button {
+    background-color: #535353;
+    color: #b3b3b3;
+    font-weight: bold;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+}
