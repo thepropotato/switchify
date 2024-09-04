@@ -157,7 +157,7 @@ function LoadSongs() {
             const errorCode = error.response?.status;
 
             if (errorCode === 403 && errorMessage.includes('quota')) {
-                setConversionLogs(prevLogs => [...prevLogs, { message: 'Error: Quota limit exceeded. Please try again tomorrow. (Its not you, Its us.)', isSpecial: true }]);
+                setConversionLogs(prevLogs => [...prevLogs, { message: 'Error: Quota limit exceeded...', isSpecial: true }]);
             } else {
                 setConversionLogs(prevLogs => [...prevLogs, { message: `Error copying playlist to YouTube Music: ${errorMessage}. Please try again.`, isSpecial: false }]);
             }
@@ -194,7 +194,9 @@ function LoadSongs() {
                     <div id='converted-songs-wrapper' className='sub-wrappers'>
                         <p id='pre-conversion-text'>Your conversion logs will be shown here.</p>
                         {conversionLogs.map((log, index) => (
-                            <p key={index} className={log.isSpecial ? 'special-log' : ''}>{log}</p>
+                            <p key={index} className={typeof log === 'object' && log.isSpecial ? 'special-log' : ''}>
+                                {typeof log === 'object' ? log.message : log}
+                            </p>
                         ))}
                     </div>
                 </div>
