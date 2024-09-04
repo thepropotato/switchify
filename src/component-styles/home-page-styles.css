@@ -25,8 +25,8 @@ body {
 }
 
 .container {
-    width: calc(100vw - 2rem);
-    height: calc(100vh - 2rem);
+    width: calc(100dvw - 2rem);
+    height: calc(100dvh - 2rem);
     padding: 1rem;
     display: flex;
     flex-direction: column;
