@@ -191,7 +191,7 @@ progress::-webkit-progress-value {
     }
 
     #songs-from{
-        height: calc(50% - 5rem);
+        height: calc(50% - 2.5rem);
     }
 
     progress{
