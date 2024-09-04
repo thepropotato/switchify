@@ -190,7 +190,7 @@ progress::-webkit-progress-value {
         flex-direction: column;
     }
 
-    #songs-from{
+    #songs-from, #songs-to{
         height: calc(50% - 2.5rem);
     }
 
