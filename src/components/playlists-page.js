@@ -5,8 +5,8 @@ import Navbar from "./navbar";
 import '../component-styles/playlists-page-styles.css';
 import GoogleAuth from '../helpers/google-login';
 
-const CLIENT_ID = '65a197f6ba884f0790e228aa5735a521';
-const REDIRECT_URI = 'http://localhost:3000/playlists';
+const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
+const REDIRECT_URI = 'https://switchifytm.vercel.app/playlists';
 const TOKEN_URL = 'https://accounts.spotify.com/api/token';
 
 function next(playlists, currentIndex, setCurrentIndex) {
@@ -62,7 +62,7 @@ function LoadPlaylists() {
                     code: code,
                     redirect_uri: REDIRECT_URI,
                     client_id: CLIENT_ID,
-                    client_secret: '9d77bd4cf9ac4de69d58a603d967c685'
+                    client_secret: process.env.SPOTIFY_CLIENT_SECRET,
                 }), {
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'

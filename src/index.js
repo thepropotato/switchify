@@ -11,7 +11,7 @@ import LoadSongs from './components/songs-page';
 
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
-const GOOGLE_CLIENT_ID = '209050893524-7rit5bugn83lvi8n7a8jr0eqeshekuq4.apps.googleusercontent.com';
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

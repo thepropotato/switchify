@@ -1,7 +1,7 @@
 import { useGoogleLogin } from '@react-oauth/google';
 import { gapi } from 'gapi-script';
 
-const CLIENT_ID = '209050893524-7rit5bugn83lvi8n7a8jr0eqeshekuq4.apps.googleusercontent.com';
+const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const SCOPES = 'https://www.googleapis.com/auth/youtube';
 
 const GoogleAuth = ({ onAuthSuccess }) => {
@@ -12,7 +12,7 @@ const GoogleAuth = ({ onAuthSuccess }) => {
 
             gapi.load('client:auth2', () => {
                 gapi.client.init({
-                    apiKey: 'AIzaSyCovq12i3KeT99PqILWDlH4MdDa_50SLO0',
+                    apiKey: process.env.GOOGLE_API_KEY,
                     clientId: CLIENT_ID,
                     discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'],
                     scope: SCOPES,
