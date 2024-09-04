@@ -5,7 +5,7 @@ import Navbar from "./navbar";
 import '../component-styles/playlists-page-styles.css';
 import GoogleAuth from '../helpers/google-login';
 
-const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
+const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
 const REDIRECT_URI = 'https://switchifytm.vercel.app/playlists';
 const TOKEN_URL = 'https://accounts.spotify.com/api/token';
 
@@ -62,7 +62,7 @@ function LoadPlaylists() {
                     code: code,
                     redirect_uri: REDIRECT_URI,
                     client_id: CLIENT_ID,
-                    client_secret: process.env.SPOTIFY_CLIENT_SECRET,
+                    client_secret: process.env.REACT_APP_SPOTIFY_CLIENT_SECRET,
                 }), {
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'

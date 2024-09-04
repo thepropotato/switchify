@@ -5,7 +5,7 @@ import '../component-styles/home-page-styles.css'
 import Navbar from './navbar';
 
 function authenticate () {
-    const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
+    const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
     const REDIRECT_URI = 'https://switchifytm.vercel.app/playlists';
     const AUTH_URL = 'https://accounts.spotify.com/authorize';
     const SCOPES = 'user-read-private user-read-email playlist-read-private';
