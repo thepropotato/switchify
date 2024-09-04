@@ -11,10 +11,6 @@ function closePopup() {
 
 function LoadSongs() {
 
-    useEffect(() => {
-        document.title = 'Transfer | Switchify';
-    }, []);
-
     const location = useLocation();
     const { playlist } = location.state || {};
     const [tracks, setTracks] = useState([]);
@@ -24,7 +20,7 @@ function LoadSongs() {
     const [currentSong, setCurrentSong] = useState(0);
 
     useEffect(() => {
-        document.title = 'About | Switchify';
+        document.title = 'Transfer | Switchify';
 
         let spotify_access_token = localStorage.getItem('spotify_access_token'); 
         if (spotify_access_token) {
