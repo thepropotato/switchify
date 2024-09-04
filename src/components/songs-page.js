@@ -157,7 +157,7 @@ function LoadSongs() {
             const errorCode = error.response?.status;
 
             if (errorCode === 403 && errorMessage.includes('quota')) {
-                setConversionLogs(prevLogs => [...prevLogs, { message: 'Error: Quota limit exceeded...', isSpecial: true }]);
+                setConversionLogs(prevLogs => [...prevLogs, { message: `Error: Quota limit exceeded. Please try again tomorrow. (It's not you, it's us.)`, isSpecial: true }]);
             } else {
                 setConversionLogs(prevLogs => [...prevLogs, { message: `Error copying playlist to YouTube Music: ${errorMessage}. Please try again.`, isSpecial: false }]);
             }
